@@ -9,7 +9,7 @@ from routers import routersExample
 app = FastAPI()
 
 
-app.include_router(routersExample.router_dummy.router)
+app.include_router(routersExample.router_dummy)
 
 
 @app.get("/")

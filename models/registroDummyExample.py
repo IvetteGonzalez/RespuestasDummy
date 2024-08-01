@@ -5,7 +5,7 @@ from pydantic import BaseModel
 class RegisterDummyExampleRequest(BaseModel):
     tipoMovimiento: str = Query(pattern='^([0-9]{2})$', description='Tipo Movimiento', examples=['01'])
     fechaAlta: str = Query(default=None, pattern='^([1,2]{1}[0-9]{1}[0-9]{2}[0-1]{1}[0-9]{1}[0-9]{2})?$')
-    ficha: str = Query(pattern='^([0-9]{1,6})$')
+    fichaPemex: str = Query(pattern='^([0-9]{1,6})$')
     regimen: str = Query(pattern='^([0-9]{2})$')
     curp: str = Query(pattern='^([A-Z]{4}\\d{6}[A-Z]{6}[A-Z0-9]{2})$')
     curpNueva: str = Query(default=None, pattern='^([A-Z]{4}\\d{6}[A-Z]{6}[A-Z0-9]{2})$')
